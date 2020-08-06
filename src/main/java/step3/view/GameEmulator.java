@@ -87,11 +87,9 @@ public class GameEmulator {
     public static void showMeTheChampions(List<Car> cars) {
         PrintMessage.print(
                 "\n%s 가 최종 우승했습니다.",
-                String.join(", ",
-                        getChampions(cars)
-                                .stream()
-                                .map(car -> car.getName())
-                                .collect(Collectors.toList()))
+                getChampions(cars).stream()
+                        .map(Car::getName)
+                        .collect(Collectors.joining(", "))
         );
     }
 }

@@ -33,7 +33,9 @@ public class GameEmulator {
      */
     public static void showMeThePositions(List<Car> cars) {
         PrintMessage.println();
-        for (Car car : cars) showMeThePosition(car);
+        for (Car car : cars) {
+            showMeThePosition(car);
+        }
     }
 
     /**

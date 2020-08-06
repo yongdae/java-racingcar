@@ -1,9 +1,6 @@
 package step3.domain;
 
-import step3.lib.PrintMessage;
-
 import java.util.Random;
-import java.util.stream.IntStream;
 
 /***
  * 자동차 게임에서 이용되는 자동차 클래스
@@ -98,17 +95,12 @@ public class Car {
     }
 
     /**
-     * 현재 자동차의 위치를 출력한다.
+     * 현재 자동차의 위치와 같은지 판별한다.
+     *
+     * @param position
+     * @return
      */
-    public void showMeThePosition() {
-        if (this.getCurrentPosition() == 0)
-            return;
-
-        PrintMessage.print("%s : ", this.getName());
-
-        IntStream.range(0, this.getCurrentPosition())
-                .forEach(number -> PrintMessage.print("-"));
-
-        PrintMessage.println();
+    public boolean equalPosition(int position) {
+        return this.position == position;
     }
 }

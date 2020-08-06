@@ -77,7 +77,7 @@ public class GameEmulator {
                 .orElse(-1);
 
         return cars.stream()
-                .filter(car -> car.getCurrentPosition() == max)
+                .filter(car -> car.equalPosition(max))
                 .collect(Collectors.toList());
     }
 
